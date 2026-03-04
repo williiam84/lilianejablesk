@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liliane Jableski - Formação Nail Design</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <header class="header">
+    <div class="container">
+
+        <div class="logo">
+            Liliane <span style="color: black;">Jableski</span>
+        </div>
+
+        <nav class="nav" id="nav">
+            <a href="#">Início</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#cursos">Cursos</a>
+            <a href="#contato">Contato</a>
+        </nav>
+
+        <a href="https://wa.me/5500000000000" target="_blank" class="header-btn">
+            WhatsApp
+        </a>
+
+        <div class="menu-toggle" onclick="toggleMenu()">
+            ☰
+        </div>
+
+    </div>
+</header>
+    <!-- HERO SECTION -->
+    <section class="hero animavel">
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+        
+        <span class="hero-badge">
+            <i class="fa-solid fa-award"></i>
+            +5 anos formando profissionais
+        </span>
+
+        <h1>
+            Formação Profissional em 
+            <span>Nail Design</span> 
+            com Método Exclusivo
+        </h1>
+        
+        <p>
+            <i class="fa-solid fa-star"></i>
+            Cursos presenciais desenvolvidos por Liliane Jableski,
+            com metodologia própria, técnica avançada e foco em
+            transformar iniciantes em profissionais de destaque.
+        </p>
+
+        <div class="hero-buttons">
+            <button class="btn-primary" onclick="scrollParaCursos()">
+                <i class="fa-solid fa-graduation-cap"></i>
+                Quero me especializar
+            </button>
+
+            <a href="https://wa.me/5500000000000" target="_blank" class="btn-secondary">
+                <i class="fa-brands fa-whatsapp"></i>
+                Falar no WhatsApp
+            </a>
+        </div>
+    </div>
+</section>
+<section class="sobre animavel" id="sobre">
+    <div class="container sobre-container">
+
+        <div class="sobre-texto">
+            <span class="sobre-badge">
+                <i class="fa-solid fa-medal"></i>
+                Autoridade e Método Próprio
+            </span>
+
+            <h2>Especialista em Formação de Nail Designers</h2>
+
+            <p>
+                Liliane Jableski é Nail Designer e educadora há mais de 5 anos,
+                criadora de uma <strong>metodologia própria</strong> que pontua cada etapa
+                do aprendizado de forma clara, técnica e estratégica.
+            </p>
+
+            <p>
+                Todos os cursos foram desenvolvidos com base em anos de estudo aprofundado sobre:
+            </p>
+
+            <ul class="sobre-lista">
+                <li><i class="fa-solid fa-check"></i> Anatomia</li>
+                <li><i class="fa-solid fa-check"></i> Fisiologia</li>
+                <li><i class="fa-solid fa-check"></i> Química dos produtos</li>
+                <li><i class="fa-solid fa-check"></i> Biossegurança</li>
+                <li><i class="fa-solid fa-check"></i> Alergias</li>
+                <li><i class="fa-solid fa-check"></i> Estrutura da lâmina ungueal</li>
+            </ul>
+
+            <p class="sobre-destaque">
+                Cada aluna recebe um conteúdo profundo, técnico e aplicável,
+                com <strong>apostila exclusiva</strong> desenvolvida pela própria Liliane.
+            </p>
+        </div>
+
+    </div>
+</section>
+<section class="cursos-section animavel" id="cursos">
+    
+    <div class="container">
+         <div class="cursos-header">
+            <span class="cursos-badge">
+                <i class="fa-solid fa-gem"></i> Formação Profissional
+            </span>
+            <h2>Escolha o curso ideal para sua evolução</h2>
+        </div>
+        <div class="cursos-grid">
+
+            <!-- Nail Start -->
+            <div class="curso-card">
+                <div class="curso-topo">
+                    <span class="curso-badge">Iniciante</span>
+                    <h3><i class="fa-solid fa-gem"></i> Nail Start</h3>
+                    <p class="curso-resumo">
+                        Formação completa para quem deseja começar do zero.
+                    </p>
+                </div>
+
+                <div class="curso-info">
+                    <span><i class="fa-regular fa-clock"></i> 2 dias presenciais</span>
+                    <span><i class="fa-solid fa-location-dot"></i> Presencial</span>
+                </div>
+
+                <div class="curso-botoes">
+                    <button class="btn-curso-primary"
+                        onclick="enviarWhats('Nail Start')">
+                        <i class="fa-brands fa-whatsapp"></i> Quero fazer
+                    </button>
+
+                    <button class="btn-curso-outline"
+                        onclick="abrirModal(
+                            'Nail Start',
+                            'Curso completo para iniciantes que desejam construir base técnica sólida e profissional.',
+                            [
+                                'Fundamentos do gel',
+                                'Estrutura e preparação correta',
+                                'Técnica segura e profissional',
+                                'Base técnica sólida',
+                                'Apostila exclusiva',
+                                'Certificado de conclusão'
+                            ],
+                            '2 dias presenciais'
+                        )">
+                        <i class="fa-solid fa-circle-info"></i> Mais informações
+                    </button>
+                </div>
+            </div>
+
+
+            <!-- Nail Advanced -->
+            <div class="curso-card destaque">
+                <div class="curso-topo">
+                    <span class="curso-badge premium">Aperfeiçoamento</span>
+                    <h3><i class="fa-solid fa-gem"></i> Nail Advanced</h3>
+                    <p class="curso-resumo">
+                        Intensivo técnico para elevar seu nível profissional.
+                    </p>
+                </div>
+
+                <div class="curso-info">
+                    <span><i class="fa-regular fa-clock"></i> 1 dia presencial</span>
+                    <span><i class="fa-solid fa-location-dot"></i> Presencial</span>
+                </div>
+
+                <div class="curso-botoes">
+                    <button class="btn-curso-primary"
+                        onclick="enviarWhats('Nail Advanced')">
+                        <i class="fa-brands fa-whatsapp"></i> Quero evoluir
+                    </button>
+
+                    <button class="btn-curso-outline"
+                        onclick="abrirModal(
+                            'Nail Advanced',
+                            'Curso focado em correção técnica e refinamento profissional.',
+                            [
+                                'Correção de falhas técnicas',
+                                'Aperfeiçoamento detalhado',
+                                'Refinamento estrutural',
+                                'Evolução de nível profissional',
+                                'Suporte personalizado',
+                                'Certificado'
+                            ],
+                            '1 dia presencial'
+                        )">
+                        <i class="fa-solid fa-circle-info"></i> Mais informações
+                    </button>
+                </div>
+            </div>
+
+
+            <!-- Método ERN – Molde F1 Iniciante -->
+            <div class="curso-card">
+                <div class="curso-topo">
+                    <span class="curso-badge">Extensão Iniciante</span>
+                    <h3><i class="fa-solid fa-gem"></i> Método ERN – Molde F1 Iniciante</h3>
+                    <p class="curso-resumo">
+                        Aprenda do zero o uso profissional do Molde F1.
+                    </p>
+                </div>
+
+                <div class="curso-info">
+                    <span><i class="fa-regular fa-clock"></i> 2 dias presenciais</span>
+                    <span><i class="fa-solid fa-location-dot"></i> Presencial</span>
+                </div>
+
+                <div class="curso-botoes">
+                    <button class="btn-curso-primary"
+                        onclick="enviarWhats('Método ERN – Molde F1 Iniciante')">
+                        <i class="fa-brands fa-whatsapp"></i> Quero aprender
+                    </button>
+
+                    <button class="btn-curso-outline"
+                        onclick="abrirModal(
+                            'Método ERN – Molde F1 Iniciante',
+                            'Ensino estruturado para quem nunca utilizou métodos extensores.',
+                            [
+                                'Aplicação correta do Molde F1',
+                                'Estruturação profissional',
+                                'Técnica segura e estratégica',
+                                'Alinhamento e simetria',
+                                'Base científica aplicada',
+                                'Certificação'
+                            ],
+                            '2 dias presenciais'
+                        )">
+                        <i class="fa-solid fa-circle-info"></i> Mais informações
+                    </button>
+                </div>
+            </div>
+
+
+            <!-- Método ERN – Molde F1 Avançado -->
+            <div class="curso-card">
+                <div class="curso-topo">
+                    <span class="curso-badge premium">Extensão Avançada</span>
+                    <h3><i class="fa-solid fa-gem"></i> Método ERN – Molde F1 Avançado</h3>
+                    <p class="curso-resumo">
+                        Aperfeiçoamento técnico para profissionais experientes.
+                    </p>
+                </div>
+
+                <div class="curso-info">
+                    <span><i class="fa-regular fa-clock"></i> 1 dia presencial</span>
+                    <span><i class="fa-solid fa-location-dot"></i> Presencial</span>
+                </div>
+
+                <div class="curso-botoes">
+                    <button class="btn-curso-primary"
+                        onclick="enviarWhats('Método ERN – Molde F1 Avançado')">
+                        <i class="fa-brands fa-whatsapp"></i> Quero me aperfeiçoar
+                    </button>
+
+                    <button class="btn-curso-outline"
+                        onclick="abrirModal(
+                            'Método ERN – Molde F1 Avançado',
+                            'Curso de refinamento para quem já trabalha com extensores.',
+                            [
+                                'Ajustes estruturais avançados',
+                                'Refinamento técnico',
+                                'Correção de assimetrias',
+                                'Acabamento profissional',
+                                'Técnicas de alta performance',
+                                'Certificação'
+                            ],
+                            '1 dia presencial'
+                        )">
+                        <i class="fa-solid fa-circle-info"></i> Mais informações
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- MODAL MAIS INFORMAÇÕES -->
+<div class="modal-detalhes" id="modalDetalhes">
+    <div class="modal-overlay" onclick="fecharModal()"></div>
+
+    <div class="modal-container">
+
+        <button class="modal-fechar" onclick="fecharModal()">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <div class="modal-header">
+            <h2 id="modalTitulo">Título do Curso</h2>
+            <p id="modalSubtitulo">Resumo estratégico do curso.</p>
+        </div>
+
+        <div class="modal-conteudo">
+            <h4>O que está incluso:</h4>
+            <ul id="modalLista">
+                <li>Item exemplo</li>
+            </ul>
+
+            <div class="modal-info-extra">
+                <p><strong>Duração:</strong> <span id="modalDuracao"></span></p>
+                <p><strong>Modalidade:</strong> Presencial</p>
+            </div>
+        </div>
+
+        <div class="modal-botoes">
+            <a href="https://wa.me/5500000000000" target="_blank" class="btn-modal-primary">
+                <i class="fa-brands fa-whatsapp"></i>
+                Quero garantir minha vaga
+            </a>
+        </div>
+
+    </div>
+</div>
+<section class="diferenciais animavel">
+    <div class="container">
+
+        <div class="diferenciais-header">
+            <span class="diferenciais-badge">
+                <i class="fa-solid fa-crown"></i>
+                Diferenciais Exclusivos
+            </span>
+
+            <h2>Muito além de um curso. Uma formação estratégica.</h2>
+
+            <p>
+                Cada curso é criado e desenvolvido por Liliane Jableski,
+                baseado em sua experiência prática como Nail Designer e educadora.
+            </p>
+        </div>
+
+        <div class="diferenciais-grid">
+
+            <div class="diferencial-item">
+                <i class="fa-solid fa-lightbulb"></i>
+                <span>Metodologia própria</span>
+            </div>
+
+            <div class="diferencial-item">
+                <i class="fa-solid fa-book"></i>
+                <span>Apostila exclusiva</span>
+            </div>
+
+            <div class="diferencial-item">
+                <i class="fa-solid fa-microscope"></i>
+                <span>Conteúdo com fundamentos técnicos reais</span>
+            </div>
+
+            <div class="diferencial-item">
+                <i class="fa-solid fa-flask"></i>
+                <span>Base científica aplicada</span>
+            </div>
+
+            <div class="diferencial-item">
+                <i class="fa-solid fa-user-check"></i>
+                <span>Ensino altamente personalizado</span>
+            </div>
+
+            <div class="diferencial-item vip">
+                <i class="fa-solid fa-star"></i>
+                <span>Opções VIP com acompanhamento individual</span>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+<!-- DEPOIMENTOS -->
+<section class="depoimentos animavel">
+    <div class="container">
+
+        <div class="depoimentos-header">
+            <span class="depoimentos-badge">
+                <i class="fa-solid fa-star"></i>
+                Avaliações das Alunas
+            </span>
+            <h2>O que dizem sobre a formação</h2>
+        </div>
+
+        <div class="depoimentos-slider">
+
+            <div class="depoimentos-wrapper" id="depoimentosWrapper">
+
+                <!-- Depoimento 1 -->
+                <div class="depoimento-card">
+                    <div class="estrelas">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p>
+                        Eu te agradeço por tudo Lili, muito obrigada mesmo.
+                        Você transmite uma paz que deixa tudo mais leve...
+                    </p>
+                    <h4>Jackline Chupel</h4>
+                </div>
+
+                <!-- Depoimento 2 -->
+                <div class="depoimento-card">
+                    <div class="estrelas">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p>
+                        Sou muito grata pela atenção e carinho.
+                        Aprendi muitoooo e me inspiro demais em você!
+                    </p>
+                    <h4>Ketlin Aparecida Alves dos Santos</h4>
+                </div>
+
+                <!-- Depoimento 3 -->
+                <div class="depoimento-card">
+                    <div class="estrelas">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p>
+                        O curso é muito rico de conteúdo...
+                        Sempre te admirei como mulher, mas agora muito mais como profissional.
+                    </p>
+                    <h4>Jeovana Silveira</h4>
+                </div>
+
+            </div>
+
+            <!-- DOTS -->
+            <div class="depoimentos-dots" id="depoimentosDots"></div>
+
+        </div>
+
+    </div>
+</section>
+<!-- FOOTER -->
+<footer class="footer animavel" id="contato">
+
+    <div class="container footer-container">
+
+        <!-- Marca -->
+        <div class="footer-col">
+            <div class="footer-logo">
+                Liliane <span>Jableski</span>
+            </div>
+
+            <p class="footer-desc">
+                Formação profissional em Nail Design com metodologia própria,
+                ensino técnico e foco na formação de profissionais de excelência.
+            </p>
+
+            <div class="footer-social">
+                <a href="https://instagram.com/lilianejableski_unhas" target="_blank">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="#" target="_blank">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+            </div>
+        </div>
+
+
+        <!-- Links -->
+        <div class="footer-col">
+            <h4>Navegação</h4>
+
+            <ul>
+                <li><a href="#">Início</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#cursos">Cursos</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </div>
+
+
+        <!-- Contato -->
+        <div class="footer-col">
+            <h4>Contato</h4>
+
+            <p>
+                <i class="fa-solid fa-phone"></i>
+                (47) 8446-9429
+            </p>
+
+            <p>
+                <i class="fa-brands fa-whatsapp"></i>
+                (47) 8446-9429
+            </p>
+
+            <p>
+                <i class="fa-solid fa-location-dot"></i>
+                Atendimento Presencial
+            </p>
+
+            <a href="https://wa.me/554784469429" target="_blank" class="footer-btn">
+                Falar no WhatsApp
+            </a>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>
+            © 2026 Liliane Jableski • Todos os direitos reservados
+        </p>
+    </div>
+
+</footer>
+    <script src="script.js"></script>
+</body>
+</html>
