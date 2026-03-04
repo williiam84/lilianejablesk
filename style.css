@@ -1589,3 +1589,168 @@ html, body {
     opacity: 1;
     transform: translateY(0);
 }
+/* ===================== */
+/* HEADER RESPONSIVO     */
+/* ===================== */
+.header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    flex-wrap: wrap; /* permite quebrar em linhas no celular */
+}
+
+.header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.header .nav {
+    display: flex;
+    gap: 20px;
+}
+
+.header .nav a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+}
+
+/* Botão WhatsApp */
+.header .header-btn {
+    display: inline-block;
+    padding: 8px 12px;
+    background-color: #25d366;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* Ícone do menu */
+.header .menu-toggle {
+    display: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+/* ===================== */
+/* ESTILO RESPONSIVO CELULAR */
+/* ===================== */
+@media (max-width: 768px) {
+    .header .nav {
+        display: none; /* esconde menu */
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+        background: #fff;
+    }
+    .header {
+        gap: 100px;
+    }
+    .header .nav.active {
+        display: flex; /* mostra menu quando clicado */
+    }
+
+    .header .menu-toggle {
+        display: block; /* mostra botão */
+    }
+
+    .header .header-btn {
+        order: 1; /* mantém o botão logo após o logo */
+    }
+
+    .header .nav a {
+        padding: 10px 0;
+        border-bottom: 1px solid #eee;
+    }
+
+    .header .container {
+        flex-wrap: nowrap;
+    }
+}
+/* Container geral */
+.header .container {
+  display: flex;
+  justify-content: space-between; /* logo à esquerda, menu à direita */
+  align-items: center;
+  padding: 10px 20px;
+}
+
+/* Logo à esquerda */
+.header .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Agrupamento do menu + botão + toggle */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Menu principal */
+.header .nav {
+  display: flex;
+  gap: 15px;
+}
+
+.header .nav a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+}
+
+/* Botão WhatsApp */
+.header .header-btn {
+  padding: 8px 12px;
+  background-color: #25d366;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* Ícone do menu (celular) */
+.header .menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+/* ===== RESPONSIVO CELULAR ===== */
+@media (max-width: 768px) {
+  .header-right {
+    gap: 10px;
+  }
+
+  /* Menu escondido por padrão */
+  .header .nav {
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    flex-direction: column;
+    background: #fff;
+    border: 1px solid #eee;
+    padding: 10px;
+    display: none;
+    gap: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    z-index: 999;
+  }
+
+  /* Menu ativo */
+  .header .nav.active {
+    display: flex;
+  }
+
+  .header .nav a {
+    padding: 5px 10px;
+  }
+
+  .header .menu-toggle {
+    display: block;
+  }
+}
