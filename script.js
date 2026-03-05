@@ -117,3 +117,32 @@ const observerUniversal = new IntersectionObserver(entries => {
 
 // Observa todos os elementos animáveis
 elementosAnimaveis.forEach(el => observerUniversal.observe(el));
+
+// FAQ toggle
+document.querySelectorAll(".faq-pergunta").forEach(pergunta => {
+    pergunta.addEventListener("click", () => {
+        const item = pergunta.parentElement;
+        item.classList.toggle("ativo");
+    });
+});
+const imagens = document.querySelectorAll(".galeria-item img");
+const modal = document.getElementById("modalGaleria");
+const imagemModal = document.getElementById("imagemModal");
+const fechar = document.querySelector(".fechar-modal");
+
+imagens.forEach(img => {
+    img.addEventListener("click", () => {
+        modal.style.display = "flex";
+        imagemModal.src = img.src;
+    });
+});
+
+fechar.addEventListener("click", () => {
+    modal.style.display = "none";
+});
+
+modal.addEventListener("click", (e) => {
+    if (e.target === modal) {
+        modal.style.display = "none";
+    }
+});
