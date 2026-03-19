@@ -1,148 +1,338 @@
+/* ================================
+MENU MOBILE
+================================ */
 function toggleMenu() {
-    document.getElementById("nav").classList.toggle("active");
+    const nav = document.getElementById("nav");
+    if (nav) nav.classList.toggle("active");
 }
 
-/* Scroll suave para cursos */
+
+/* ================================
+SCROLL SUAVE
+================================ */
 function scrollParaCursos() {
-    document.querySelector('#cursos').scrollIntoView({
-        behavior: 'smooth'
-    });
+    const section = document.querySelector("#cursos");
+    if (section) section.scrollIntoView({ behavior: "smooth" });
 }
 
-/* ===== MODAL ===== */
 
+/* ================================
+MODAL CURSOS
+================================ */
 function abrirModal(titulo, resumo, lista, duracao) {
 
-    // Travar scroll do body
+    const modal = document.getElementById("modalDetalhes");
+    const ul = document.getElementById("modalLista");
+
+    if (!modal || !ul) return;
+
     document.body.style.overflow = "hidden";
 
-    // Preencher dados
     document.getElementById("modalTitulo").innerText = titulo;
     document.getElementById("modalSubtitulo").innerText = resumo;
     document.getElementById("modalDuracao").innerText = duracao;
 
-    const ul = document.getElementById("modalLista");
     ul.innerHTML = "";
 
     lista.forEach(item => {
+
         const li = document.createElement("li");
+
         li.innerHTML = `<i class="fa-solid fa-check"></i> ${item}`;
+
         ul.appendChild(li);
+
     });
 
-    // Abrir modal
-    document.getElementById("modalDetalhes").classList.add("ativo");
+    modal.classList.add("ativo");
+
 }
 
 function fecharModal() {
+
     document.body.style.overflow = "auto";
-    document.getElementById("modalDetalhes").classList.remove("ativo");
+
+    const modal = document.getElementById("modalDetalhes");
+
+    if (modal) modal.classList.remove("ativo");
+
 }
 
-/* Fechar modal ao pressionar ESC */
-document.addEventListener("keydown", function(e) {
-    if (e.key === "Escape") {
-        fecharModal();
-    }
+document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") fecharModal();
 });
-/* ===== SLIDER DEPOIMENTOS ===== */
 
-const wrapper = document.getElementById("depoimentosWrapper");
-const dotsContainer = document.getElementById("depoimentosDots");
-const slides = document.querySelectorAll(".depoimento-card");
 
-let currentIndex = 0;
-let interval;
-
-function criarDots() {
-    slides.forEach((_, index) => {
-        const dot = document.createElement("span");
-        dot.addEventListener("click", () => {
-            currentIndex = index;
-            atualizarSlider();
-            resetInterval();
-        });
-        dotsContainer.appendChild(dot);
-    });
-}
-
-function atualizarSlider() {
-    wrapper.style.transform = `translateX(-${currentIndex * 100}%)`;
-
-    document.querySelectorAll(".depoimentos-dots span")
-        .forEach(dot => dot.classList.remove("active"));
-
-    dotsContainer.children[currentIndex].classList.add("active");
-}
-
-function autoSlide() {
-    currentIndex++;
-    if (currentIndex >= slides.length) {
-        currentIndex = 0;
-    }
-    atualizarSlider();
-}
-
-function resetInterval() {
-    clearInterval(interval);
-    interval = setInterval(autoSlide, 5000);
-}
-
-criarDots();
-atualizarSlider();
-interval = setInterval(autoSlide, 5000);
+/* ================================
+WHATSAPP CURSOS
+================================ */
 function enviarWhats(curso) {
-    const numero = "554784469429"; // COLOQUE O NÚMERO AQUI (com DDI 55)
-    const mensagem = `Olá! Tenho interesse no curso ${curso}. Poderia me enviar mais informações?`;
-    const link = `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
-    
-    window.open(link, "_blank");
+
+    const numero = "554784469429";
+
+    const mensagem =
+        `Olá! Tenho interesse no curso ${curso}. Poderia me enviar mais informações?`;
+
+    const url =
+        `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
+
+    window.open(url, "_blank");
+
 }
-enviarWhats();
-// ===============================
-// ANIMAÇÃO DE ENTRADA UNIVERSAL
-// ===============================
+
+
+/* ================================
+AGENDAMENTO
+================================ */
+function abrirFormulario() {
+
+    const form = document.getElementById("formAgendamento");
+
+    if (!form) return;
+
+    form.style.display = "block";
+
+    setTimeout(() => {
+        form.classList.add("ativo");
+    }, 10);
+
+}
+
+function agendarWhats() {
+
+    const nome = document.getElementById("nome")?.value || "";
+    const telefone = document.getElementById("telefone")?.value || "";
+    const procedimento = document.getElementById("procedimento")?.value || "";
+    const mensagemExtra = document.getElementById("mensagem")?.value || "";
+
+    const numero = "554784469429";
+
+    const texto =
+`Olá! Vim pelo site.
+Meu nome é ${nome}
+Telefone: ${telefone}
+Quero agendar um horário para ${procedimento}
+${mensagemExtra}`;
+
+    const url =
+        `https://wa.me/${numero}?text=${encodeURIComponent(texto)}`;
+
+    window.open(url, "_blank");
+
+}
+
+
+/* ================================
+ANIMAÇÃO AO ENTRAR NA TELA
+================================ */
 const elementosAnimaveis = document.querySelectorAll(".animavel");
 
-const observerUniversal = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add("animar-entrada");
-            observerUniversal.unobserve(entry.target); // anima uma vez
-        }
-    });
-}, {
-    threshold: 0.2 // entra quando 20% do elemento está visível
-});
+if (elementosAnimaveis.length > 0) {
 
-// Observa todos os elementos animáveis
-elementosAnimaveis.forEach(el => observerUniversal.observe(el));
+    const observer = new IntersectionObserver((entries) => {
 
-// FAQ toggle
+        entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+
+                entry.target.classList.add("animar-entrada");
+
+                observer.unobserve(entry.target);
+
+            }
+
+        });
+
+    }, { threshold: 0.2 });
+
+    elementosAnimaveis.forEach(el => observer.observe(el));
+
+}
+
+
+/* ================================
+FAQ
+================================ */
 document.querySelectorAll(".faq-pergunta").forEach(pergunta => {
+
     pergunta.addEventListener("click", () => {
-        const item = pergunta.parentElement;
-        item.classList.toggle("ativo");
+
+        pergunta.parentElement.classList.toggle("ativo");
+
     });
+
 });
-const imagens = document.querySelectorAll(".galeria-item img");
-const modal = document.getElementById("modalGaleria");
+
+
+/* ================================
+GALERIA (LIGHTBOX)
+================================ */
+const imagensGaleria = document.querySelectorAll(".galeria-item img");
+const modalGaleria = document.getElementById("modalGaleria");
 const imagemModal = document.getElementById("imagemModal");
-const fechar = document.querySelector(".fechar-modal");
+const fecharModalGaleria = document.querySelector(".fechar-modal");
 
-imagens.forEach(img => {
+imagensGaleria.forEach(img => {
+
     img.addEventListener("click", () => {
-        modal.style.display = "flex";
+
+        if (!modalGaleria || !imagemModal) return;
+
+        modalGaleria.style.display = "flex";
+
         imagemModal.src = img.src;
+
     });
+
 });
 
-fechar.addEventListener("click", () => {
-    modal.style.display = "none";
-});
+if (fecharModalGaleria) {
 
-modal.addEventListener("click", (e) => {
-    if (e.target === modal) {
-        modal.style.display = "none";
+    fecharModalGaleria.addEventListener("click", () => {
+
+        modalGaleria.style.display = "none";
+
+    });
+
+}
+
+if (modalGaleria) {
+
+    modalGaleria.addEventListener("click", (e) => {
+
+        if (e.target === modalGaleria) {
+
+            modalGaleria.style.display = "none";
+
+        }
+
+    });
+
+}
+
+
+/* ================================
+SLIDER DEPOIMENTOS (COM DOTS)
+================================ */
+const sliderDep = document.querySelector(".slides");
+const slidesDep = document.querySelectorAll(".slides .slide");
+const dotsContainer = document.querySelector(".dots");
+
+let depoIndex = 0;
+
+if (sliderDep && slidesDep.length && dotsContainer) {
+
+    slidesDep.forEach((_, i) => {
+
+        const dot = document.createElement("span");
+
+        dot.classList.add("dot");
+
+        if (i === 0) dot.classList.add("active");
+
+        dot.addEventListener("click", () => {
+
+            depoIndex = i;
+
+            atualizarDepoimentos();
+
+        });
+
+        dotsContainer.appendChild(dot);
+
+    });
+
+    function atualizarDepoimentos() {
+
+        sliderDep.style.transform = `translateX(-${depoIndex * 100}%)`;
+
+        const dots = dotsContainer.querySelectorAll(".dot");
+
+        dots.forEach(dot => dot.classList.remove("active"));
+
+        dots[depoIndex].classList.add("active");
+
     }
-});
+
+    setInterval(() => {
+
+        depoIndex++;
+
+        if (depoIndex >= slidesDep.length) {
+
+            depoIndex = 0;
+
+        }
+
+        atualizarDepoimentos();
+
+    }, 5000);
+
+}
+
+
+/* ================================
+SLIDER CURSO DESTAQUE
+================================ */
+const slidesCurso = document.querySelectorAll(".curso-slider .slide");
+
+let cursoIndex = 0;
+
+function mostrarCurso(index) {
+
+    slidesCurso.forEach((slide, i) => {
+
+        slide.style.transform = `translateX(${100 * (i - index)}%)`;
+
+    });
+
+}
+
+if (slidesCurso.length > 0) {
+
+    mostrarCurso(cursoIndex);
+
+    setInterval(() => {
+
+        cursoIndex++;
+
+        if (cursoIndex >= slidesCurso.length) {
+
+            cursoIndex = 0;
+
+        }
+
+        mostrarCurso(cursoIndex);
+
+    }, 3000);
+
+}
+
+
+/* ================================
+CARROSSEL SOBRE
+================================ */
+const carouselSobre = document.getElementById("carouselSobre");
+
+let sobreIndex = 0;
+
+if (carouselSobre) {
+
+    const totalSlides = carouselSobre.children.length;
+
+    setInterval(() => {
+
+        sobreIndex++;
+
+        if (sobreIndex >= totalSlides) {
+
+            sobreIndex = 0;
+
+        }
+
+        carouselSobre.style.transform =
+            `translateX(-${sobreIndex * 100}%)`;
+
+    }, 4000);
+
+}
