@@ -1039,30 +1039,33 @@ VIDEO CURSO
         font-size: 20px;
     }
 }
-/* ===== FOOTER ===== */
+/* ===== FOOTER PREMIUM ===== */
+
 .footer {
-    background: #fafafa;
-    padding: 80px 0 25px;
+    background: #ffffff;
+    padding: 90px 20px 30px;
     border-top: 1px solid #eee;
 }
 
-/* GRID REAL */
+/* GRID PRINCIPAL */
 .footer-container {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr;
-    gap: 60px;
-    align-items: start;
+    gap: 50px;
+    max-width: 1200px;
+    margin: auto;
 }
 
-/* Marca maior */
+/* ===== COLUNA MARCA ===== */
 .footer-brand {
     max-width: 420px;
 }
 
 .footer-logo {
-    font-size: 22px;
+    font-size: 24px;
     font-weight: 700;
     margin-bottom: 15px;
+    letter-spacing: 0.5px;
 }
 
 .footer-logo span {
@@ -1071,45 +1074,46 @@ VIDEO CURSO
 
 .footer-desc {
     color: #666;
-    line-height: 1.6;
+    line-height: 1.7;
     margin-bottom: 25px;
+    font-size: 14px;
 }
 
-/* Social */
+/* SOCIAL */
 .footer-social {
     display: flex;
     gap: 12px;
 }
 
 .footer-social a {
-    width: 38px;
-    height: 38px;
-    border-radius: 50%;
-    background: #f1f1f1;
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    background: #f5f5f5;
     display: grid;
     place-items: center;
     color: #333;
-    transition: 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .footer-social a:hover {
     background: #c5a46d;
     color: #fff;
+    transform: translateY(-3px);
 }
 
-/* Títulos */
+/* ===== COLUNAS ===== */
 .footer-col h4 {
-    margin-bottom: 20px;
+    margin-bottom: 18px;
     font-size: 15px;
     font-weight: 600;
-    color: #111;
+    color: #1c1c1c;
 }
 
-/* Lista */
+/* LISTAS */
 .footer-col ul {
     list-style: none;
     padding: 0;
-    margin: 0;
 }
 
 .footer-col ul li {
@@ -1119,17 +1123,22 @@ VIDEO CURSO
 .footer-col ul a {
     text-decoration: none;
     color: #666;
-    transition: 0.3s;
+    font-size: 14px;
+    transition: all 0.3s ease;
 }
 
 .footer-col ul a:hover {
     color: #c5a46d;
+    padding-left: 5px;
 }
 
-/* Contato */
+/* CONTATO */
 .footer-col p {
-    margin-bottom: 12px;
+    font-size: 14px;
     color: #666;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
 }
 
 .footer-col i {
@@ -1137,31 +1146,80 @@ VIDEO CURSO
     color: #c5a46d;
 }
 
-/* Botão */
+/* BOTÃO */
 .footer-btn {
     display: inline-block;
     margin-top: 15px;
-    padding: 10px 18px;
+    padding: 12px 20px;
     background: #c5a46d;
     color: #fff;
-    border-radius: 6px;
+    border-radius: 10px;
     text-decoration: none;
     font-size: 14px;
-    transition: 0.3s;
+    font-weight: 500;
+    transition: all 0.3s ease;
 }
 
 .footer-btn:hover {
     background: #a88a5b;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
 }
 
-/* Bottom */
+/* ===== LINHA FINAL ===== */
 .footer-bottom {
-    text-align: center;
     margin-top: 60px;
     padding-top: 20px;
     border-top: 1px solid #eee;
-    font-size: 14px;
+    text-align: center;
+    font-size: 13px;
     color: #888;
+}
+
+/* ===== RESPONSIVO ===== */
+
+@media (max-width: 900px) {
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+
+    .footer-brand {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .footer {
+        padding: 60px 15px 20px;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        text-align: center;
+    }
+
+    .footer-brand {
+        max-width: 100%;
+    }
+
+    .footer-social {
+        justify-content: center;
+    }
+
+    .footer-col p {
+        justify-content: center;
+    }
+
+    .footer-col ul a:hover {
+        padding-left: 0;
+    }
+
+    .footer-bottom {
+        font-size: 12px;
+    }
 }
 /* ===== DEPOIMENTOS CLEAN ===== */
 .depoimentos {
@@ -1266,6 +1324,51 @@ VIDEO CURSO
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+@media (max-width: 768px){
+
+    .curso-card{
+        padding: 16px; /* menor */
+        border-radius: 12px;
+    }
+
+    .curso-topo{
+        margin-bottom: 8px;
+    }
+
+    .curso-topo h3{
+        font-size: 16px; /* menor */
+        margin-bottom: 4px;
+    }
+
+    .curso-resumo{
+        font-size: 13px;
+        margin-bottom: 6px;
+        line-height: 1.4;
+    }
+
+    .curso-info{
+        gap: 2px;
+        margin: 6px 0;
+        font-size: 12px;
+    }
+
+    .curso-info span{
+        gap: 4px;
+    }
+
+    .curso-botoes{
+        margin-top: 6px;
+        gap: 6px;
+    }
+
+    .btn-curso-primary,
+    .btn-curso-outline{
+        padding: 10px; /* botão mais fino */
+        font-size: 13px;
+        border-radius: 8px;
+    }
+
 }
 /* ===================== */
 /* MOBILE PEQUENO (480px) */
@@ -4040,4 +4143,416 @@ RESPONSIVO
     font-size:28px;
 }
 
+}
+/* =================================
+RESPONSIVO GLOBAL MELHORADO
+================================= */
+
+/* TABLET */
+@media (max-width: 992px){
+
+    /* CURSO DESTAQUE */
+    .curso-destaque-content{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .curso-info{
+        max-width: 100%;
+    }
+
+    /* SOBRE */
+    .sobre-container{
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .sobre-botoes{
+        justify-content: center;
+    }
+
+    /* GALERIA */
+    .galeria-grid{
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    /* CURSOS GRID */
+    .cursos-grid{
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* MOBILE */
+@media (max-width: 768px){
+
+    /* TEXTOS */
+    h2{
+        font-size: 26px !important;
+    }
+
+    p{
+        font-size: 15px;
+    }
+
+    /* MODAL */
+    .fechar-modal{
+        top: 15px;
+        right: 20px;
+        font-size: 30px;
+    }
+
+    .imagem-modal{
+        max-width: 95%;
+        max-height: 80%;
+    }
+
+    /* FORM AGENDAMENTO */
+    .agendamento{
+        padding: 80px 15px;
+    }
+
+    .agendamento-card{
+        padding: 20px;
+    }
+
+    .form-agendamento{
+        padding: 20px;
+    }
+
+    /* BOTÕES */
+    .curso-botoes,
+    .sobre-botoes{
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .curso-botoes button,
+    .btn-primary,
+    .btn-secondary{
+        width: 100%;
+    }
+
+    /* CAROUSEL */
+    .carousel-item img{
+        height: 280px;
+    }
+
+    /* SLIDER CURSO */
+    .curso-slider{
+        height: 250px;
+    }
+
+    /* FEEDBACK */
+    .feedback-card{
+        padding: 25px;
+    }
+
+    .titulo-section{
+        font-size: 26px;
+    }
+
+    .subtitulo-section{
+        font-size: 15px;
+    }
+
+}
+
+
+/* MOBILE PEQUENO */
+@media (max-width: 480px){
+
+    /* GALERIA */
+    .galeria-grid{
+        grid-template-columns: 1fr;
+    }
+
+    /* IMAGENS */
+    .carousel-item img{
+        height: 220px;
+    }
+
+    .curso-slider{
+        height: 200px;
+    }
+
+    /* TEXTO */
+    .curso-info h2{
+        font-size: 22px;
+    }
+
+    /* BOTÃO */
+    .btn-abrir-agendamento,
+    .btn-agendar{
+        font-size: 14px;
+        padding: 14px;
+    }
+
+}
+.cursos-section{
+    padding:140px 20px;
+}
+.cursos-section{
+    padding: clamp(60px, 8vw, 140px) 20px;
+}
+.curso-slider {
+    flex: 1 1 100%;
+    max-width: 100%;
+}
+
+.curso-info {
+    flex: 1 1 100%;
+    max-width: 100%;
+}
+@media (max-width: 768px){
+
+    .curso-destaque{
+        padding: 50px 15px;
+    }
+
+    .curso-destaque-content{
+        gap: 20px;
+    }
+
+    .curso-slider{
+        height: 200px; /* diminui altura */
+        border-radius: 10px;
+    }
+
+    .curso-info h2{
+        font-size: 22px;
+    }
+
+    .curso-info p{
+        font-size: 14px;
+    }
+
+    .curso-detalhes li{
+        font-size: 13px;
+    }
+
+    .curso-botoes{
+        flex-direction: column;
+    }
+
+    .btn-primary,
+    .btn-secondary{
+        width: 100%;
+        padding: 14px;
+        font-size: 14px;
+    }
+
+}
+@media (max-width: 768px){
+
+    .curso-card{
+        padding: 20px; /* antes tava MUITO grande */
+        border-radius: 14px;
+    }
+
+    .curso-topo{
+        margin-bottom: 12px; /* reduz espaço */
+    }
+
+    .curso-topo h3{
+        font-size: 18px;
+        margin-bottom: 6px;
+    }
+
+    .curso-resumo{
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+
+    .curso-info{
+        gap: 4px;
+        margin: 10px 0;
+        font-size: 13px;
+    }
+
+    .curso-info span{
+        display: flex;
+        align-items: center;
+        gap: 6px;
+    }
+
+    .curso-botoes{
+        margin-top: 10px;
+        gap: 8px;
+    }
+
+    .btn-curso-primary,
+    .btn-curso-outline{
+        padding: 12px;
+        font-size: 14px;
+    }
+
+}
+/* =================================
+DEPOIMENTOS SLIDER (FINAL)
+================================= */
+
+.depoimentos{
+    padding: 80px 15px;
+    background: #fafafa;
+}
+
+/* HEADER */
+.depoimentos-header{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.depoimentos-header h2{
+    font-size: 28px;
+    margin: 10px 0;
+}
+
+.depoimentos-header p{
+    color: #666;
+    max-width: 500px;
+    margin: auto;
+    font-size: 14px;
+}
+
+/* CONTAINER */
+.slider-container{
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+
+/* TRACK */
+.slider{
+    display: flex;
+    transition: transform 0.4s ease;
+}
+
+/* SLIDE */
+.slide{
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* CARD */
+.depoimento-card{
+    width: 100%;
+    max-width: 100%;
+    background: #fff;
+    padding: 20px;
+    border-radius: 14px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+/* ESTRELAS */
+.estrelas{
+    color: #f4b400;
+    margin-bottom: 10px;
+}
+
+/* TEXTO */
+.depoimento-card p{
+    font-size: 14px;
+    color: #444;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+/* ALUNA */
+.depoimento-aluna{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* FOTO PERFIL */
+.depoimento-aluna img:first-child{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* TEXTO NOME */
+.depoimento-aluna strong{
+    font-size: 14px;
+}
+
+.depoimento-aluna span{
+    font-size: 12px;
+    color: #777;
+}
+
+/* IMAGEM EXTRA (UNHA) */
+.depoimento-aluna img:last-child{
+    width: 55px;
+    height: 55px;
+    border-radius: 8px;
+    margin-left: auto;
+}
+
+/* DOTS */
+.slider-dots{
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    gap: 8px;
+}
+
+.slider-dots span{
+    width: 8px;
+    height: 8px;
+    background: #ddd;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.slider-dots span.active{
+    background: #c5a46d;
+    transform: scale(1.2);
+}
+
+/* =================================
+RESPONSIVO MOBILE
+================================= */
+
+@media (max-width: 768px){
+
+    .depoimentos{
+        padding: 60px 10px;
+    }
+
+    .depoimentos-header h2{
+        font-size: 22px;
+    }
+
+    .depoimento-card{
+        padding: 16px;
+    }
+
+    .depoimento-card p{
+        font-size: 13px;
+
+        /* corta texto grande */
+        display: -webkit-box;
+        -webkit-line-clamp: 5;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+}
+
+/* 🔥 ESSENCIAL (corrige corte lateral) */
+*{
+    box-sizing: border-box;
+}
+/*{
+    outline: 1px solid red;
+}*/
+body{
+    overflow-x: hidden;
 }

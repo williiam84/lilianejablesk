@@ -336,3 +336,18 @@ if (carouselSobre) {
     }, 4000);
 
 }
+let index = 0;
+const slider = document.getElementById("sliderDepoimentos");
+const slides = document.querySelectorAll("#sliderDepoimentos .slide");
+
+function moverSlide(){
+    index++;
+
+    if(index >= slides.length){
+        index = 0;
+    }
+
+    slider.style.transform = `translateX(-${index * 100}%)`;
+}
+
+setInterval(moverSlide, 4000);

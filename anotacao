@@ -1,0 +1,370 @@
+    <section class="depoimentos iniciantes animavel">
+        <div class="container">
+            <div class="depoimentos-header">
+                <span class="depoimentos-badge">
+                    <i class="fa-solid fa-star"></i>
+                    Feedbacks reais
+                </span>
+                <h2>Feedbacks do Curso Iniciante</h2>
+                <p>
+                    Veja o que nossas alunas estão falando após fazer o curso
+                    de Nail Design com a professora Liliane Jableski.
+                </p>
+            </div>
+
+            <div class="slider-container">
+                <div class="slider" id="sliderDepoimentos">
+
+                    <!-- SLIDE 1 -->
+                    <div class="slide">
+                        <div class="depoimento-card">
+                            <div class="estrelas">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <p>
+                                "Estou passando aqui para agradecer por todo o aprendizado, carinho, cuidado e dedicação
+                                que você teve comigo no curso. Te agradeço imensamente por tudo. Saiba que eu te
+                                escolheria mil vezes se fosse preciso.
+
+                                Você é uma mulher incrível, foi um prazer te conhecer. Faltam palavras para descrever o
+                                que foram esses dois dias de aprendizado que tive com você. E quando eu falo de
+                                aprendizado, não é somente das unhas.
+
+                                E adivinha… estou chorando, né? Kkk. Porque meu coração está quentinho e cheio de
+                                orgulho de mim mesma por ter conseguido.
+
+                                Deus sempre sabe de todas as coisas.
+
+                                Obrigada por tudo "
+                            </p>
+                            <div class="depoimento-aluna">
+                                <img src="img/alunas/andrieli.jpg" alt="Andrieli Balan">
+                                <div>
+                                    <strong>Andrieli Balan</strong>
+                                    <span>Curso Iniciante</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SLIDE 2 -->
+                    <div class="slide">
+                        <div class="depoimento-card">
+                            <div class="estrelas">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <p>
+                                "Concluí o curso com a Lili e foi simplesmente perfeito. Os dois dias de curso foram uma
+                                grande oportunidade de aprendizado e transformação.
+
+                                A dedicação e o carinho que a Lili coloca em cada detalhe do curso são incomparáveis.
+                                Sinto que cresci muito, não só profissionalmente, mas também como pessoa.
+
+                                Estou extremamente grata por todo o conhecimento adquirido e pelas novas perspectivas
+                                que desenvolvi. "
+                            </p>
+                            <div class="depoimento-aluna">
+                                <img src="img/alunas/fernanda.jpg" alt="Fernanda Helena">
+                                <div>
+                                    <strong>Fernanda Helena</strong>
+                                    <span>Curso Iniciante</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SLIDE 3 -->
+                    <div class="slide">
+                        <div class="depoimento-card">
+                            <div class="estrelas">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <p>
+                                "Quero compartilhar com todos vocês uma experiência incrível que vivi neste final de
+                                semana. Hoje terminei o curso com a Lili e foi simplesmente maravilhoso.
+
+                                Os dois dias de curso foram uma grande oportunidade de aprendizado e transformação para
+                                mim. A dedicação e o carinho que a Lili tem em cada detalhe do curso são incomparáveis.
+                                Sinto que cresci muito, não só profissionalmente, mas também como pessoa.
+
+                                Sou extremamente grata por todo o conhecimento adquirido.
+
+                                Obrigada @lilianejableski_unhas por essa experiência inesquecível. Vou levar para a
+                                minha vida todos os ensinamentos. Você é uma mulher incrível e, com certeza, uma grande
+                                inspiração para mim.
+
+                                Obrigada por cada detalhe e por cada ensinamento, até pelos “puxões de orelha”. Você se
+                                tornou uma parte muito marcante na minha vida. "
+                            </p>
+                            <div class="depoimento-aluna">
+                                <img src="img/alunas/taniele.jpg" alt="Taniele Ruthes">
+                                <div>
+                                    <strong>Taniele Ruthes</strong>
+                                    <span>Curso Iniciante</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SLIDE 4 -->
+                    <div class="slide">
+                        <div class="depoimento-card">
+                            <div class="estrelas">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <p>
+                                "
+
+                                Lili, já faz um tempo que eu queria vir aqui te agradecer por isso.
+
+                                Faz uns 10 meses que fiz o curso com você e que decidi entrar para essa profissão
+                                maravilhosa, pela qual me apaixono mais a cada dia que passa.
+
+                                Olhar para trás, para a primeira unha que eu fiz, e lembrar que pensei em desistir
+                                várias vezes, hoje só me motiva ainda mais. Eu nunca imaginei que um dia teria um
+                                resultado como esse.
+
+                                Claro que ainda quero melhorar muito mais, mas fico muito realizada em ver onde estou
+                                chegando, e tudo graças a você e a todo o apoio que me deu.
+
+                                Obrigada mesmo. "
+                            </p>
+                            <div class="depoimento-aluna">
+                                <img src="img/alunas/thais.jpg" alt="Thais Correia">
+                                <div>
+                                    <strong>Thais Correia</strong>
+                                    <span>Curso Iniciante</span>
+                                </div>
+                                <img src="imagemunha10.jpeg" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SLIDE 5 -->
+                    <div class="slide">
+                        <div class="depoimento-card">
+                            <div class="estrelas">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <p>
+                                "Com toda certeza eu tenho que te agradecer, eu aprendi muita coisa,
+                                o curso é muito rico de conteúdo, tenha certeza que você vai formar
+                                profissionais maravilhosas. Não posso deixar de falar da instrutora também,
+                                com toda paciência na hora da prática e da explicação.
+                                Sempre te admirei como mulher, mas agora, muito mais como profissional."
+                            </p>
+                            <div class="depoimento-aluna">
+                                <img src="img/alunas/jeovana.jpg" alt="Jeovana Silveira">
+                                <div>
+                                    <strong>Jeovana Silveira</strong>
+                                    <span>Curso Iniciante</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div> <!-- fim slider -->
+
+                <!-- DOTS -->
+                <div class="slider-dots" id="sliderDots"></div>
+            </div>
+        </div>
+    </section>
+    let index = 0;
+const slider = document.getElementById("sliderDepoimentos");
+const slides = document.querySelectorAll(".slide");
+
+function moverSlide(){
+    index++;
+    if(index >= slides.length) index = 0;
+    slider.style.transform = `translateX(-${index * 100}%)`;
+}
+
+setInterval(moverSlide, 4000);
+/* =================================
+DEPOIMENTOS SLIDER (FINAL)
+================================= */
+
+.depoimentos{
+    padding: 80px 15px;
+    background: #fafafa;
+}
+
+/* HEADER */
+.depoimentos-header{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.depoimentos-header h2{
+    font-size: 28px;
+    margin: 10px 0;
+}
+
+.depoimentos-header p{
+    color: #666;
+    max-width: 500px;
+    margin: auto;
+    font-size: 14px;
+}
+
+/* CONTAINER */
+.slider-container{
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+
+/* TRACK */
+.slider{
+    display: flex;
+    transition: transform 0.4s ease;
+}
+
+/* SLIDE */
+.slide{
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* CARD */
+.depoimento-card{
+    width: 100%;
+    max-width: 100%;
+    background: #fff;
+    padding: 20px;
+    border-radius: 14px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+/* ESTRELAS */
+.estrelas{
+    color: #f4b400;
+    margin-bottom: 10px;
+}
+
+/* TEXTO */
+.depoimento-card p{
+    font-size: 14px;
+    color: #444;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+/* ALUNA */
+.depoimento-aluna{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* FOTO PERFIL */
+.depoimento-aluna img:first-child{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* TEXTO NOME */
+.depoimento-aluna strong{
+    font-size: 14px;
+}
+
+.depoimento-aluna span{
+    font-size: 12px;
+    color: #777;
+}
+
+/* IMAGEM EXTRA (UNHA) */
+.depoimento-aluna img:last-child{
+    width: 55px;
+    height: 55px;
+    border-radius: 8px;
+    margin-left: auto;
+}
+
+/* DOTS */
+.slider-dots{
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    gap: 8px;
+}
+
+.slider-dots span{
+    width: 8px;
+    height: 8px;
+    background: #ddd;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.slider-dots span.active{
+    background: #c5a46d;
+    transform: scale(1.2);
+}
+
+/* =================================
+RESPONSIVO MOBILE
+================================= */
+
+@media (max-width: 768px){
+
+    .depoimentos{
+        padding: 60px 10px;
+    }
+
+    .depoimentos-header h2{
+        font-size: 22px;
+    }
+
+    .depoimento-card{
+        padding: 16px;
+    }
+
+    .depoimento-card p{
+        font-size: 13px;
+
+        /* corta texto grande */
+        display: -webkit-box;
+        -webkit-line-clamp: 5;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+}
+
+/* 🔥 ESSENCIAL (corrige corte lateral) */
+*{
+    box-sizing: border-box;
+}
+*{
+    outline: 1px solid red;
+}
+body{
+    overflow-x: hidden;
+}
