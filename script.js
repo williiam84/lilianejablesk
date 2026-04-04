@@ -1,29 +1,31 @@
 /* ================================
+INIT
+================================ */
+document.addEventListener("DOMContentLoaded", () => {
+
+/* ================================
 MENU MOBILE
 ================================ */
-function toggleMenu() {
-    const nav = document.getElementById("nav");
+const nav = document.getElementById("nav");
+window.toggleMenu = () => {
     if (nav) nav.classList.toggle("active");
-}
-
+};
 
 /* ================================
 SCROLL SUAVE
 ================================ */
-function scrollParaCursos() {
+window.scrollParaCursos = () => {
     const section = document.querySelector("#cursos");
-    if (section) section.scrollIntoView({ behavior: "smooth" });
-}
-
+    if (section) section.scrollIntoView({ behavior: "smooth", block: "start" });
+};
 
 /* ================================
 MODAL CURSOS
 ================================ */
-function abrirModal(titulo, resumo, lista, duracao) {
+const modal = document.getElementById("modalDetalhes");
+const ul = document.getElementById("modalLista");
 
-    const modal = document.getElementById("modalDetalhes");
-    const ul = document.getElementById("modalLista");
-
+window.abrirModal = (titulo, resumo, lista, duracao) => {
     if (!modal || !ul) return;
 
     document.body.style.overflow = "hidden";
@@ -32,322 +34,185 @@ function abrirModal(titulo, resumo, lista, duracao) {
     document.getElementById("modalSubtitulo").innerText = resumo;
     document.getElementById("modalDuracao").innerText = duracao;
 
-    ul.innerHTML = "";
-
-    lista.forEach(item => {
-
-        const li = document.createElement("li");
-
-        li.innerHTML = `<i class="fa-solid fa-check"></i> ${item}`;
-
-        ul.appendChild(li);
-
-    });
+    ul.innerHTML = lista.map(item =>
+        `<li><i class="fa-solid fa-check"></i> ${item}</li>`
+    ).join("");
 
     modal.classList.add("ativo");
+};
 
-}
-
-function fecharModal() {
-
+window.fecharModal = () => {
     document.body.style.overflow = "auto";
-
-    const modal = document.getElementById("modalDetalhes");
-
-    if (modal) modal.classList.remove("ativo");
-
-}
+    modal?.classList.remove("ativo");
+};
 
 document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") fecharModal();
+    if (e.key === "Escape") window.fecharModal();
 });
 
-
 /* ================================
-WHATSAPP CURSOS
+WHATSAPP
 ================================ */
-function enviarWhats(curso) {
+const numero = "554784469429";
 
-    const numero = "554784469429";
+window.enviarWhats = (curso) => {
+    const msg = `Olá! Tenho interesse no curso ${curso}. Poderia me enviar mais informações?`;
+    window.open(`https://wa.me/${numero}?text=${encodeURIComponent(msg)}`, "_blank");
+};
 
-    const mensagem =
-        `Olá! Tenho interesse no curso ${curso}. Poderia me enviar mais informações?`;
-
-    const url =
-        `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
-
-    window.open(url, "_blank");
-
-}
-
-
-/* ================================
-AGENDAMENTO
-================================ */
-function abrirFormulario() {
-
-    const form = document.getElementById("formAgendamento");
-
-    if (!form) return;
-
-    form.style.display = "block";
-
-    setTimeout(() => {
-        form.classList.add("ativo");
-    }, 10);
-
-}
-
-function agendarWhats() {
-
+window.agendarWhats = () => {
     const nome = document.getElementById("nome")?.value || "";
     const telefone = document.getElementById("telefone")?.value || "";
     const procedimento = document.getElementById("procedimento")?.value || "";
     const mensagemExtra = document.getElementById("mensagem")?.value || "";
 
-    const numero = "554784469429";
-
     const texto =
 `Olá! Vim pelo site.
 Meu nome é ${nome}
 Telefone: ${telefone}
-Quero agendar um horário para ${procedimento}
+Quero agendar: ${procedimento}
 ${mensagemExtra}`;
 
-    const url =
-        `https://wa.me/${numero}?text=${encodeURIComponent(texto)}`;
-
-    window.open(url, "_blank");
-
-}
-
+    window.open(`https://wa.me/${numero}?text=${encodeURIComponent(texto)}`, "_blank");
+};
 
 /* ================================
-ANIMAÇÃO AO ENTRAR NA TELA
+FORM AGENDAMENTO
 ================================ */
-const elementosAnimaveis = document.querySelectorAll(".animavel");
+window.abrirFormulario = () => {
+    const form = document.getElementById("formAgendamento");
+    if (!form) return;
 
-if (elementosAnimaveis.length > 0) {
+    form.style.display = "block";
+    requestAnimationFrame(() => form.classList.add("ativo"));
+};
 
-    const observer = new IntersectionObserver((entries) => {
+/* ================================
+ANIMAÇÃO (OTIMIZADA)
+================================ */
+const elementos = document.querySelectorAll(".animavel");
 
+if (elementos.length) {
+    const observer = new IntersectionObserver((entries, obs) => {
         entries.forEach(entry => {
-
             if (entry.isIntersecting) {
-
                 entry.target.classList.add("animar-entrada");
-
-                observer.unobserve(entry.target);
-
+                obs.unobserve(entry.target);
             }
-
         });
+    }, { threshold: 0.15 });
 
-    }, { threshold: 0.2 });
-
-    elementosAnimaveis.forEach(el => observer.observe(el));
-
+    elementos.forEach(el => observer.observe(el));
 }
-
 
 /* ================================
 FAQ
 ================================ */
-document.querySelectorAll(".faq-pergunta").forEach(pergunta => {
-
-    pergunta.addEventListener("click", () => {
-
-        pergunta.parentElement.classList.toggle("ativo");
-
+document.querySelectorAll(".faq-pergunta").forEach(btn => {
+    btn.addEventListener("click", () => {
+        btn.parentElement.classList.toggle("ativo");
     });
-
 });
-
 
 /* ================================
 GALERIA (LIGHTBOX)
 ================================ */
-const imagensGaleria = document.querySelectorAll(".galeria-item img");
 const modalGaleria = document.getElementById("modalGaleria");
 const imagemModal = document.getElementById("imagemModal");
-const fecharModalGaleria = document.querySelector(".fechar-modal");
 
-imagensGaleria.forEach(img => {
-
+document.querySelectorAll(".galeria-item img").forEach(img => {
     img.addEventListener("click", () => {
-
         if (!modalGaleria || !imagemModal) return;
-
         modalGaleria.style.display = "flex";
-
         imagemModal.src = img.src;
-
     });
-
 });
 
-if (fecharModalGaleria) {
+document.querySelectorAll(".fechar-modal").forEach(btn => {
+    btn.addEventListener("click", () => modalGaleria.style.display = "none");
+});
 
-    fecharModalGaleria.addEventListener("click", () => {
-
-        modalGaleria.style.display = "none";
-
-    });
-
-}
-
-if (modalGaleria) {
-
-    modalGaleria.addEventListener("click", (e) => {
-
-        if (e.target === modalGaleria) {
-
-            modalGaleria.style.display = "none";
-
-        }
-
-    });
-
-}
-
+modalGaleria?.addEventListener("click", (e) => {
+    if (e.target === modalGaleria) modalGaleria.style.display = "none";
+});
 
 /* ================================
-SLIDER DEPOIMENTOS (COM DOTS)
+SLIDER DEPOIMENTOS (OTIMIZADO)
 ================================ */
 const sliderDep = document.querySelector(".slides");
 const slidesDep = document.querySelectorAll(".slides .slide");
 const dotsContainer = document.querySelector(".dots");
 
 let depoIndex = 0;
+let intervaloDep;
 
 if (sliderDep && slidesDep.length && dotsContainer) {
 
     slidesDep.forEach((_, i) => {
-
         const dot = document.createElement("span");
-
         dot.classList.add("dot");
-
         if (i === 0) dot.classList.add("active");
 
         dot.addEventListener("click", () => {
-
             depoIndex = i;
-
-            atualizarDepoimentos();
-
+            updateDep();
         });
 
         dotsContainer.appendChild(dot);
-
     });
 
-    function atualizarDepoimentos() {
-
+    function updateDep() {
         sliderDep.style.transform = `translateX(-${depoIndex * 100}%)`;
-
-        const dots = dotsContainer.querySelectorAll(".dot");
-
-        dots.forEach(dot => dot.classList.remove("active"));
-
-        dots[depoIndex].classList.add("active");
-
+        dotsContainer.querySelectorAll(".dot")
+            .forEach(d => d.classList.remove("active"));
+        dotsContainer.children[depoIndex].classList.add("active");
     }
 
-    setInterval(() => {
+    function autoDep() {
+        depoIndex = (depoIndex + 1) % slidesDep.length;
+        updateDep();
+    }
 
-        depoIndex++;
+    intervaloDep = setInterval(autoDep, 5000);
 
-        if (depoIndex >= slidesDep.length) {
-
-            depoIndex = 0;
-
-        }
-
-        atualizarDepoimentos();
-
-    }, 5000);
-
+    sliderDep.addEventListener("mouseenter", () => clearInterval(intervaloDep));
+    sliderDep.addEventListener("mouseleave", () => intervaloDep = setInterval(autoDep, 5000));
 }
-
 
 /* ================================
 SLIDER CURSO DESTAQUE
 ================================ */
 const slidesCurso = document.querySelectorAll(".curso-slider .slide");
-
 let cursoIndex = 0;
 
-function mostrarCurso(index) {
-
+function atualizarCurso() {
     slidesCurso.forEach((slide, i) => {
-
-        slide.style.transform = `translateX(${100 * (i - index)}%)`;
-
+        slide.style.transform = `translateX(${100 * (i - cursoIndex)}%)`;
     });
-
 }
 
-if (slidesCurso.length > 0) {
-
-    mostrarCurso(cursoIndex);
+if (slidesCurso.length) {
+    atualizarCurso();
 
     setInterval(() => {
-
-        cursoIndex++;
-
-        if (cursoIndex >= slidesCurso.length) {
-
-            cursoIndex = 0;
-
-        }
-
-        mostrarCurso(cursoIndex);
-
-    }, 3000);
-
+        cursoIndex = (cursoIndex + 1) % slidesCurso.length;
+        atualizarCurso();
+    }, 4000);
 }
-
 
 /* ================================
 CARROSSEL SOBRE
 ================================ */
-const carouselSobre = document.getElementById("carouselSobre");
+const carousel = document.getElementById("carouselSobre");
 
-let sobreIndex = 0;
-
-if (carouselSobre) {
-
-    const totalSlides = carouselSobre.children.length;
+if (carousel) {
+    let index = 0;
+    const total = carousel.children.length;
 
     setInterval(() => {
-
-        sobreIndex++;
-
-        if (sobreIndex >= totalSlides) {
-
-            sobreIndex = 0;
-
-        }
-
-        carouselSobre.style.transform =
-            `translateX(-${sobreIndex * 100}%)`;
-
+        index = (index + 1) % total;
+        carousel.style.transform = `translateX(-${index * 100}%)`;
     }, 4000);
-
-}
-let index = 0;
-const slider = document.getElementById("sliderDepoimentos");
-const slides = document.querySelectorAll("#sliderDepoimentos .slide");
-
-function moverSlide(){
-    index++;
-
-    if(index >= slides.length){
-        index = 0;
-    }
-
-    slider.style.transform = `translateX(-${index * 100}%)`;
 }
 
-setInterval(moverSlide, 4000);
+});

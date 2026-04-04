@@ -4580,3 +4580,813 @@ RESPONSIVO MOBILE
 body{
     overflow-x: hidden;
 }
+/* ========================= */
+/* HEADER MARROM (SEM MUDAR DESIGN) */
+/* ========================= */
+
+.header {
+    background: rgba(250, 243, 235, 0.95) !important;
+    box-shadow: 0 4px 20px rgba(107, 79, 58, 0.08) !important;
+}
+
+/* LOGO */
+.logo {
+    color: #6B4F3A !important;
+}
+
+/* Nome "Jableski" que está inline */
+.logo span {
+    color: #3E2C23 !important;
+}
+
+/* LINKS */
+.nav a {
+    color: #4A3326 !important;
+}
+
+/* HOVER */
+.nav a:hover {
+    color: #6B4F3A !important;
+}
+
+.nav a::after {
+    background: #6B4F3A !important;
+}
+
+/* BOTÃO (se tiver no header) */
+.header-btn {
+    background: linear-gradient(135deg, #6B4F3A, #8B6B4C) !important;
+}
+/* ========================= */
+/* HERO BRANCO FORÇADO */
+/* ========================= */
+
+.hero {
+    background: #ffffff !important;
+}
+
+/* remove qualquer overlay que escureça */
+.hero-overlay {
+    background: transparent !important;
+}
+
+/* texto ajustado pra contraste */
+.hero h1,
+.hero p {
+    color: #1c1c1c !important;
+}
+
+.hero h1 span {
+    color: #c5a46d !important; /* mantém o dourado */
+}
+/* ========================= */
+/* SOBRE FUNDO BRANCO */
+/* ========================= */
+
+.sobre {
+    background: #ffffff !important;
+}
+
+/* cards/lista continuam leves */
+.sobre-lista li {
+    background: #ffffff !important;
+    border: 1px solid #eee !important;
+}
+
+/* selo continua bonito */
+.sobre-selo {
+    background: #c5a46d !important;
+}
+
+/* texto com contraste */
+.sobre h2 {
+    color: #1c1c1c !important;
+}
+
+.sobre p {
+    color: #555 !important;
+}
+
+/* galeria também branca */
+.sobre-galeria {
+    background: #ffffff !important;
+}
+/* ========================= */
+/* VIDEO CURSO FUNDO BRANCO */
+/* ========================= */
+
+.video-curso {
+    background: #ffffff !important;
+}
+
+/* texto */
+.video-curso-texto h2 {
+    color: #1c1c1c !important;
+}
+
+.video-curso-texto p {
+    color: #555 !important;
+}
+
+/* badge */
+.video-badge {
+    background: rgba(197,164,109,0.15) !important;
+    color: #a88a5b !important;
+}
+
+/* vídeo mais clean */
+.video-wrapper {
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08) !important;
+}
+/* ========================= */
+/* SEÇÕES FINAIS BRANCAS */
+/* ========================= */
+
+.curso-destaque,
+.cursos-section,
+.galeria,
+.depoimentos,
+.feedbacks-curso-avancado,
+.localizacao,
+.faq,
+.agendamento {
+    background: #ffffff !important;
+}
+
+/* ========================= */
+/* TEXTOS */
+/* ========================= */
+
+.curso-info p,
+.curso-resumo,
+.feedback-text,
+.localizacao-info p,
+.faq-resposta p,
+.agendamento-header p {
+    color: #555 !important;
+}
+
+h2, h3 {
+    color: #1c1c1c !important;
+}
+
+/* ========================= */
+/* CARDS */
+/* ========================= */
+
+.curso-card,
+.depoimento-card,
+.feedback-card,
+.agendamento-card,
+.faq-item {
+    background: #ffffff !important;
+    border: 1px solid #eee !important;
+}
+
+/* ========================= */
+/* GALERIA */
+/* ========================= */
+
+.galeria-item {
+    background: #ffffff !important;
+}
+
+/* overlay suave */
+.galeria-overlay {
+    background: rgba(0,0,0,0.4) !important;
+}
+
+/* ========================= */
+/* BOTÕES */
+/* ========================= */
+
+.btn-curso-primary,
+.btn-primary {
+    background: linear-gradient(135deg, #c5a46d, #a88a5b) !important;
+    color: #fff !important;
+}
+
+.btn-curso-outline,
+.btn-secondary {
+    border: 2px solid #c5a46d !important;
+    color: #c5a46d !important;
+}
+
+.btn-curso-outline:hover,
+.btn-secondary:hover {
+    background: #c5a46d !important;
+    color: #fff !important;
+}
+
+/* ========================= */
+/* BADGES */
+/* ========================= */
+
+.curso-badge,
+.cursos-badge,
+.galeria-badge,
+.depoimentos-badge,
+.localizacao-badge,
+.faq-badge,
+.agendamento-badge {
+    background: rgba(197,164,109,0.15) !important;
+    color: #a88a5b !important;
+}
+
+/* ========================= */
+/* LISTAS */
+/* ========================= */
+
+.curso-detalhes li,
+.localizacao-lista li {
+    color: #333 !important;
+}
+
+/* ========================= */
+/* FAQ */
+/* ========================= */
+
+.faq-pergunta {
+    color: #1c1c1c !important;
+}
+
+/* ========================= */
+/* MODAL */
+/* ========================= */
+
+.modal-container {
+    background: #ffffff !important;
+}
+
+.modal-overlay {
+    background: rgba(0,0,0,0.6) !important;
+}
+
+/* ========================= */
+/* FOOTER */
+/* ========================= */
+
+.footer {
+    background: #ffffff !important;
+    border-top: 1px solid #eee !important;
+}
+
+.footer-logo {
+    color: #c5a46d !important;
+}
+
+.footer-logo span {
+    color: #1c1c1c !important;
+}
+
+.footer-desc {
+    color: #555 !important;
+}
+
+.footer-col h4 {
+    color: #1c1c1c !important;
+}
+
+.footer-col a {
+    color: #555 !important;
+}
+
+.footer-col a:hover {
+    color: #c5a46d !important;
+}
+
+.footer-bottom {
+    border-top: 1px solid #eee !important;
+    color: #777 !important;
+}
+/* ========================= */
+/* PERFORMANCE / SCROLL SUAVE */
+/* ========================= */
+
+/* animações mais leves */
+.animavel {
+    will-change: transform, opacity;
+    transform: translateZ(0);
+    transition: all 0.4s ease !important;
+}
+
+/* SOMBRAS (APENAS ONDE PRECISA) */
+.curso-card,
+.depoimento-card,
+.feedback-card,
+.video-wrapper,
+.header {
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05) !important;
+}
+
+/* remove blur pesado do header */
+.header {
+    backdrop-filter: none !important;
+}
+
+/* melhora renderização */
+body {
+    -webkit-font-smoothing: antialiased;
+    scroll-behavior: smooth;
+}
+
+/* imagens mais leves */
+img {
+    will-change: transform;
+    transform: translateZ(0);
+}
+
+/* evita scroll travando */
+html, body {
+    overflow-x: hidden;
+}/* RESET BÁSICO */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* CONTAINER PADRÃO */
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* ========================= */
+/* LOCALIZAÇÃO */
+/* ========================= */
+
+.localizacao {
+    text-align: center;
+    padding: 60px 0;
+}
+
+.localizacao h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.localizacao p {
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.localizacao-botoes {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+}
+
+.localizacao-botoes a {
+    width: 100%;
+    max-width: 280px;
+    text-align: center;
+}
+
+/* ========================= */
+/* FAQ */
+/* ========================= */
+
+.faq {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.faq h2 {
+    margin-bottom: 30px;
+}
+
+.faq-container {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.faq-item {
+    margin-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.faq-pergunta {
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 15px;
+    text-align: left;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+}
+
+.faq-resposta {
+    display: none;
+    padding: 0 15px 15px;
+    color: #555;
+}
+
+/* ========================= */
+/* CTA FINAL */
+/* ========================= */
+
+.agendamento {
+    text-align: center;
+    padding: 60px 0;
+}
+
+.agendamento h2 {
+    margin-bottom: 10px;
+}
+
+.agendamento p {
+    margin-bottom: 20px;
+    color: #555;
+}
+
+/* ========================= */
+/* BOTÕES */
+/* ========================= */
+
+.btn-primary {
+    background: #ff7a00;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background: #e96d00;
+}
+
+.btn-secondary {
+    background: transparent;
+    border: 2px solid #ff7a00;
+    color: #ff7a00;
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.btn-secondary:hover {
+    background: #ff7a00;
+    color: white;
+}
+
+/* ========================= */
+/* FOOTER */
+/* ========================= */
+
+.footer {
+    background: #111;
+    color: #fff;
+    padding: 60px 0 20px;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.footer-col {
+    text-align: center;
+}
+
+.footer-logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.footer-logo span {
+    color: #ff7a00;
+}
+
+.footer-desc {
+    margin: 10px 0;
+    color: #ccc;
+    font-size: 14px;
+}
+
+.footer-links {
+    list-style: none;
+}
+
+.footer-links li {
+    margin: 8px 0;
+    color: #ccc;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #ccc;
+}
+
+.footer-links a:hover {
+    color: #ff7a00;
+}
+
+.footer-social a {
+    color: #fff;
+    margin: 0 8px;
+    font-size: 18px;
+}
+
+.footer-btn {
+    display: inline-block;
+    margin-top: 10px;
+    background: #25d366;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+.footer-bottom {
+    border-top: 1px solid #222;
+    margin-top: 30px;
+    padding-top: 15px;
+    text-align: center;
+    font-size: 14px;
+    color: #aaa;
+}
+
+/* ========================= */
+/* RESPONSIVO */
+/* ========================= */
+
+@media (min-width: 768px) {
+
+    .localizacao-botoes {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .footer-container {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+    }
+
+    .footer-col {
+        flex: 1;
+    }
+}
+.agendamento {
+    padding: 70px 0;
+    text-align: center;
+    background: #fff7f0;
+}
+
+.agendamento-badge {
+    display: inline-block;
+    background: #ff7a00;
+    color: white;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.agendamento h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.agendamento-desc {
+    color: #555;
+    max-width: 500px;
+    margin: 0 auto 25px;
+}
+
+.agendamento-beneficios {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 25px;
+    color: #333;
+    font-size: 15px;
+}
+
+.agendamento-beneficios div i {
+    color: #ff7a00;
+    margin-right: 5px;
+}
+
+.btn-agendamento {
+    font-size: 16px;
+    padding: 14px 24px;
+}
+
+.agendamento-info-extra {
+    margin-top: 15px;
+    font-size: 13px;
+    color: #777;
+}
+
+/* RESPONSIVO */
+@media (min-width: 768px) {
+    .agendamento-beneficios {
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+    }
+}
+/* ========================= */
+/* AGENDAMENTO (CTA FINAL) */
+/* ========================= */
+
+.agendamento {
+    padding: 70px 0;
+    background: #fff7f0;
+}
+
+/* CONTAINER CORRIGIDO */
+.agendamento-container {
+    display: flex;
+    flex-direction: column; /* força ficar em coluna */
+    align-items: center;
+    text-align: center;
+}
+
+/* espaçamento automático */
+.agendamento-container > * {
+    margin-bottom: 15px;
+}
+
+/* badge */
+.agendamento-badge {
+    background: #ff7a00;
+    color: #fff;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+/* título */
+.agendamento h2 {
+    font-size: 30px;
+    margin: 5px 0;
+}
+
+/* descrição */
+.agendamento-desc {
+    color: #555;
+    max-width: 500px;
+}
+
+/* benefícios */
+.agendamento-beneficios {
+    display: flex;
+    flex-direction: column; /* coluna no mobile */
+    gap: 8px;
+    color: #333;
+    font-size: 15px;
+}
+
+.agendamento-beneficios div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.agendamento-beneficios i {
+    color: #ff7a00;
+    margin-right: 6px;
+}
+
+/* botão */
+.btn-agendamento {
+    background: #25d366;
+    color: #fff;
+    padding: 14px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.btn-agendamento:hover {
+    transform: scale(1.05);
+}
+
+/* info extra */
+.agendamento-info-extra {
+    font-size: 13px;
+    color: #777;
+}
+
+/* ========================= */
+/* RESPONSIVO */
+/* ========================= */
+
+@media (min-width: 768px) {
+
+    .agendamento-beneficios {
+        flex-direction: row; /* linha no desktop */
+        gap: 20px;
+    }
+}
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.hero-image img {
+    max-width: 400px;
+    width: 100%;
+    border-radius: 12px;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-image img {
+        max-width: 300px;
+    }
+}
+/* HERO DESKTOP (com imagem) */
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+/* imagem */
+.hero-image img {
+    max-width: 400px;
+    width: 100%;
+    border-radius: 12px;
+}
+
+/* ========================= */
+/* MOBILE */
+/* ========================= */
+
+@media (max-width: 768px) {
+
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* ESCONDE A IMAGEM NO CELULAR */
+    .hero-image {
+        display: none;
+    }
+
+}
+/* ========================= */
+/* FOOTER BASE */
+/* ========================= */
+
+.footer-container {
+    display: flex;
+    gap: 30px;
+}
+
+/* ========================= */
+/* MOBILE COM GRID */
+/* ========================= */
+
+@media (max-width: 768px) {
+
+    .footer-container {
+        display: grid;
+        grid-template-columns: 1fr; /* 1 por linha */
+        gap: 25px;
+        text-align: center;
+    }
+
+    .footer-col {
+        width: 100%;
+    }
+
+    .footer-links {
+        padding: 0;
+    }
+
+    .footer-links li {
+        list-style: none;
+    }
+
+    .footer-social {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+
+}
